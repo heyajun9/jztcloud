@@ -1,0 +1,19 @@
+server:
+  port: 7000
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:3000/eureka/  #eureka服务端提供的注册地址
+  instance:
+    instance-id: order-0  #注册到eureka服务端的唯一实例ID
+    prefer-ip-address: true   #是否显示ip地址
+    leaseRenewalIntervalInSeconds: 10  #客户端多长时间发送心跳给eureka服务端
+    leaseExpirationDurationInSeconds: 30  #eureka服务端在接收到实例最后心跳之后，需要等待的时间
+
+Spring:
+  application:
+    name: server-order #注册到eureka服务器上的服务端name
+
+
+
+

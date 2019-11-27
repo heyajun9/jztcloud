@@ -1,0 +1,13 @@
+server:
+  port: 4000
+eureka:
+  server:
+    enable-self-preservation: false  #关闭自我保护机制
+    eviction-interval-timer-in-ms: 4000 #设置间隔清理时间（单位毫秒）
+  instance:
+    hostname: eureka001.com
+  client:
+#    register-with-eureka: false   #不把自己当做客户端注册到eureka上
+#    fetch-registry: false    #不需要从服务端获取注册信息
+    service-url:
+      defaultZone: http://eureka001.com:4000/eureka
